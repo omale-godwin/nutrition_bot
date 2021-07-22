@@ -1,0 +1,195 @@
+{% load static %}
+<!-- Navbar -->
+<header class="main-header">
+  <!-- Header top -->
+  <div class="header-top">
+    <div class="auto-container">
+      <div class="clearfix">
+        <!--Top left-->
+        <div class="top-left clearfix">
+          <!--social-icon-->
+          <div class="links">
+            <a href="#" class="follow-us">Follow Us :</a>
+          </div>
+          <div class="social-icon">
+            <ul class="clearfix">
+              <li>
+                <a href="#"><span class="fa fa-facebook"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-twitter"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-google-plus"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-pinterest-p"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-dribbble"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--Top right-->
+        <div class="top-right">
+          <ul class="contact clearfix">
+            <li><span>Free Call:</span> 090 3219 6744</li>
+            <li><a href="contact.html">Chat With Expert</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Header-Top -->
+
+  <!-- Header Lower -->
+  <div class="header-lower">
+    <div class="auto-container clearfix">
+      <div class="nav-outer clearfix">
+        <!-- Main Menu -->
+
+        <!-- Search box -->
+        <div class="search-box">
+          <nav class="main-menu">
+            <div class="navbar-header">
+              <!-- Toggle Button -->
+              <button
+                type="button"
+                class="navbar-toggle"
+                data-toggle="collapse"
+                data-target=".navbar-collapse"
+              >
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+
+            <div class="navbar-collapse collapse clearfix">
+              <ul class="navigation clearfix">
+                <li class="current dropdown">
+                  <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="dropdown">
+                  <a href="{% url 'about' %}">About Us</a>
+                </li>
+
+                <li class="dropdown">
+                  <a href="{% url 'news' %}">News</a>
+                </li>
+
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                {% if user.is_authenticated %}
+                <li class="dropdown">
+                  <a href="#">{{ user.first_name}}</a>
+                </li>
+
+                <li class="dropdown">
+                  <a
+                    href="javascript:{document.getElementById('logout').submit()}"
+                    class="nav-link"
+                  >
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                  </a>
+                  <form action="{% url 'logout' %}" method="POST" id="logout">
+                    {% csrf_token %}
+                    <input type="hidden" />
+                  </form>
+                </li>
+
+                {% else %}
+                <li class="dropdown">
+                  <a href="{% url 'register' %}">Register</a>
+                </li>
+
+                <li class="dropdown">
+                  <a href="{% url 'login' %}">Login</a>
+                </li>
+                {% endif %}
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End Header Lower-->
+
+  <!--Sticky Header-->
+  <div class="sticky-header">
+    <div class="auto-container clearfix">
+      <!--Logo-->
+      <div class="logo pull-left">
+        <a href="index-2.html" title=""
+          ><img src="images/logo-2.png" alt="" title=""
+        /></a>
+      </div>
+      <!--Right Col-->
+      <div class="right-col pull-right">
+        <!-- Main Menu -->
+        <nav class="main-menu">
+          <div class="navbar-header">
+            <!-- Toggle Button -->
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target=".navbar-collapse"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+          <div class="navbar-collapse collapse clearfix">
+            <ul class="navigation clearfix">
+              <li class="current dropdown">
+                <a href="{% url 'index' %}">Home</a>
+              </li>
+              <li class="dropdown">
+                <a href="{% url 'about' %}">About Us</a>
+              </li>
+
+              <li class="dropdown">
+                <a href="{% url 'news' %}">News</a>
+              </li>
+
+              <li><a href="{% url 'contact' %}">Contact</a></li>
+              {% if user.is_authenticated %}
+              <li class="dropdown">
+                <a href="#">{{ user.first_name}}</a>
+              </li>
+
+              <li class="dropdown">
+                <a
+                  href="javascript:{document.getElementById('logout').submit()}"
+                  class="nav-link"
+                >
+                  <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+                <form action="{% url 'logout' %}" method="POST" id="logout">
+                  {% csrf_token %}
+                  <input type="hidden" />
+                </form>
+              </li>
+
+              {% else %}
+              <li class="dropdown">
+                <a href="{% url 'register' %}">Register</a>
+              </li>
+
+              <li class="dropdown">
+                <a href="{% url 'login' %}">Login</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </nav>
+        <!-- Main Menu End-->
+      </div>
+    </div>
+  </div>
+  <!--End Sticky Header-->
+</header>

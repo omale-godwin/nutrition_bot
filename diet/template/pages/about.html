@@ -1,0 +1,363 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="page-wrapper">
+  <!-- Preloader -->
+  <div class="preloader"></div>
+  <!-- Main Header -->
+
+  <!--Page Title-->
+  <section
+    class="page-title"
+    style="background-image: url(/static/images/background/5.jpg)"
+  >
+    <div class="auto-container">
+      <h1>About Us</h1>
+    </div>
+    <!--Page Info-->
+    <div class="page-info">
+      <div class="auto-container clearfix">
+        <ul class="bread-crumb clearfix">
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li>About us</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--End Page Title-->
+
+  <!-- Welcome Section -->
+  <section class="welcome-section-two">
+    <div class="auto-container">
+      <div class="sec-title text-center">
+        <h2>Welcome to the <strong>Nutrition Expert System</strong></h2>
+        <span>Highest level of service you can find</span>
+      </div>
+      <!-- coontent Column -->
+      <div class="content-column">
+        <div class="content-box">
+          <div class="text">
+            Our focus is on your overall well being and helping you achieve
+            optimal health and esthetics. We handpick the best nutrition health
+            idesa into a chatbot that can be access across the globe to make
+            sure you get the most personalized health care.
+          </div>
+
+          <div class="row clearfix">
+            <!-- about-block -->
+            <div class="about-block col-md-6 col-sm-6 col-xs-12">
+              <div class="inner-box">
+                <div class="icon-box">
+                  <span class="flaticon-diploma"></span>
+                </div>
+                <div class="content-box">
+                  <h3><a href="{% url 'about' %}">Our Mission</a></h3>
+                  <p>
+                    Explain to you how you can transform health through
+                    nutrition diet change habit.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- about-block -->
+            <div class="about-block col-md-6 col-sm-6 col-xs-12">
+              <div class="inner-box">
+                <div class="icon-box">
+                  <span class="flaticon-target"></span>
+                </div>
+                <div class="content-box">
+                  <h3><a href="{% url 'about' %}">Our Vision</a></h3>
+                  <p>
+                     <ul>
+                    <li>Efficient Workout</li>
+                    <li>Right Food To Eat</li>
+                    <li>Diet Plan</li>
+                  </ul>    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Video Column -->
+      <div class="video-column">
+        <div class="inner-box">
+          <!--featured-image-box-->
+          <div class="video-image-box">
+            <figure class="image">
+              <img src="{% static 'images/nutri.jpeg' %}" alt="" />
+              <a
+                href="https://www.youtube.com/watch?v=a18py61_F_w"
+                class="video-link lightbox-image"
+              >
+                <span class="fa fa-play-circle-o"></span
+              ></a>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Welcome Section -->
+
+  <!-- Why Us -->
+  <section class="why-choose-us">
+    <div class="auto-container">
+      <div class="sec-title text-center">
+        <h2>Why people need a <strong>Health Coach</strong></h2>
+        <span>What We Do in Health Coach</span>
+      </div>
+      <div class="row clearfix">
+        <!--Featured Service -->
+        <div class="featured-service col-md-4 col-sm-6 col-xs-12">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image">
+                <a href="service-single.html"
+                  ><img src="images/resource/featured-image-1.jpg" alt=""
+                /></a>
+              </figure>
+              <div class="caption-box">
+                <div class="icon">
+                  <span class="flaticon-tropical-pineapple"></span>
+                </div>
+                <h4 class="title">
+                  <a href="service-single.html">Nutrition Strategies</a>
+                </h4>
+              </div>
+              <!--Overlay-->
+              <div class="overlay-box">
+                <div class="icon-box">
+                  <span class="flaticon-tropical-pineapple"></span>
+                </div>
+                <div class="overlay-inner">
+                  <div class="overlay-content">
+                    <h4 class="title">
+                      <a href="service-single.html">Nutrition Strategies</a>
+                    </h4>
+                    <div class="text">
+                      Finding a workout is as easy as scrolling down, picking
+                      out the session that matches your goals, andgetting your
+                      butt to the gym!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Featured Service -->
+        <div class="featured-service col-md-4 col-sm-6 col-xs-12">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image">
+                <a href="service-single.html"
+                  ><img src="images/resource/featured-image-2.jpg" alt=""
+                /></a>
+              </figure>
+              <div class="caption-box">
+                <div class="icon"><span class="flaticon-sneaker"></span></div>
+                <h4 class="title">
+                  <a href="service-single.html">Nutrition Strategies</a>
+                </h4>
+              </div>
+              <!--Overlay-->
+              <div class="overlay-box">
+                <div class="icon-box">
+                  <span class="flaticon-sneaker"></span>
+                </div>
+                <div class="overlay-inner">
+                  <div class="overlay-content">
+                    <h4 class="title">
+                      <a href="service-single.html">Nutrition Strategies</a>
+                    </h4>
+                    <div class="text">
+                      Finding a workout is as easy as scrolling down, picking
+                      out the session that matches your goals, andgetting your
+                      butt to the gym!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Featured Service -->
+        <div class="featured-service col-md-4 col-sm-6 col-xs-12">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image">
+                <a href="service-single.html"
+                  ><img src="images/resource/featured-image-3.jpg" alt=""
+                /></a>
+              </figure>
+              <div class="caption-box">
+                <div class="icon"><span class="flaticon-exercise"></span></div>
+                <h4 class="title">
+                  <a href="service-single.html">Nutrition Strategies</a>
+                </h4>
+              </div>
+              <!--Overlay-->
+              <div class="overlay-box">
+                <div class="icon-box">
+                  <span class="flaticon-exercise"></span>
+                </div>
+                <div class="overlay-inner">
+                  <div class="overlay-content">
+                    <h4 class="title">
+                      <a href="service-single.html">Nutrition Strategies</a>
+                    </h4>
+                    <div class="text">
+                      Finding a workout is as easy as scrolling down, picking
+                      out the session that matches your goals, andgetting your
+                      butt to the gym!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Why Us -->
+
+  <!-- Parallax Section -->
+  <section
+    class="parallax-section"
+    style="background-image: url(/static/images/background/1.jpg)"
+  >
+    <div class="auto-container">
+      <div class="row clearfix">
+        <div class="parallax-content col-md-8 col-sm-12">
+          <div class="inner-box">
+            <h2 class="title">
+              It is time to BALANCE your life & nourish your soul
+            </h2>
+            <div class="text">
+              Start working on your body today, and with our individual
+              nutrition plan program, already in 90 days you will see a totally
+              different in the mirror!
+            </div>
+            <div class="link">
+              <a href="#" class="theme-btn btn-style-four">More info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Parallax Section -->
+
+  <!--Default Section-->
+  <section class="default-section">
+    <div class="auto-container">
+      <div class="row clearfix">
+        <!--Accordions Column-->
+        <div class="column col-md-6 col-sm-12 col-xs-12">
+          <div class="inner-box">
+            <!--Accordion Box-->
+            <ul class="accordion-box">
+              <!--Block-->
+              <li class="accordion block">
+                <div class="acc-btn">
+                  <div class="icon-outer">
+                    <span class="icon fa fa-caret-right"></span>
+                  </div>
+                  A Natural way of improving your Daibetis.
+                </div>
+                <div class="acc-content">
+                  <div class="content">
+                    <img src="{% static 'images/resource/glass.png" alt="" />
+                    <p>
+                      Health Coach look at exercise, eating, wellness and food
+                      not just as calories and weight loss, but also emotional,
+                      mental, physical, and spiritual terms. An Integrative with
+                      Nutrition Health Coach who’s providing services in area
+                      knows like state of mind, health.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <!--Block-->
+              <li class="accordion block active-block">
+                <div class="acc-btn active">
+                  <div class="icon-outer">
+                    <span class="icon fa fa-caret-right"></span>
+                  </div>
+                  A Natural way of improving your Hypertitis.
+                </div>
+                <div class="acc-content current">
+                  <div class="content">
+                    <img src="{% static 'images/resource/glass.png" alt="" />
+                    <p>
+                      Health Coach look at exercise, eating, wellness and food
+                      not just as calories and weight loss, but also emotional,
+                      mental, physical, and spiritual terms. An Integrative with
+                      Nutrition Health Coach who’s providing services in area
+                      knows like state of mind, health.
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <!--Block-->
+              <li class="accordion block">
+                <div class="acc-btn">
+                  <div class="icon-outer">
+                    <span class="icon fa fa-caret-right"></span>
+                  </div>
+                  A Natural way of improving your Ulcer.
+                </div>
+                <div class="acc-content">
+                  <div class="content">
+                    <img src="{% static 'images/resource/glass.png" alt="" />
+                    <p>
+                      Health Coach look at exercise, eating, wellness and food
+                      not just as calories and weight loss, but also emotional,
+                      mental, physical, and spiritual terms. An Integrative with
+                      Nutrition Health Coach who’s providing services in area
+                      knows like state of mind, health.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!--End Accordion Box-->
+          </div>
+        </div>
+
+        <!--Text Column-->
+        <div class="column video-column col-md-6 col-sm-12 col-xs-12">
+          <div class="inner-box">
+            <!--featured-image-box-->
+            <div class="video-image-box">
+              <figure class="image">
+                <img src="{% static 'images/nutri.jpeg' %}" alt="" />
+                <a
+                  href="https://www.youtube.com/watch?v=a18py61_F_w"
+                  class="video-link lightbox-image"
+                >
+                  <span class="fa fa-play-circle-o"></span
+                ></a>
+              </figure>
+              <div class="caption-box">
+                “ Watch our video to learn how these expert system can transform
+                and improved your health revolution ! “
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Default Section -->
+
+  <!-- End Default Section -->
+</div>
+<!--End pagewrapper-->
+
+{% endblock %}

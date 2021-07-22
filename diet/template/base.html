@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dietary Chatbot Expert System</title>
+    <!-- Stylesheets -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'plugins/revolution/css/settings.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- REVOLUTION SETTINGS STYLES -->
+    <link
+      href="{% static 'plugins/revolution/css/layers.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- REVOLUTION LAYERS STYLES -->
+    <link
+      href="{% static 'plugins/revolution/css/navigation.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- REVOLUTION NAVIGATION STYLES -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <!--[if lt IE 9
+      ]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js' %}"></script
+    ><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js' %}"></script><![endif]-->
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Preloader -->
+
+      {% include 'partials/_navbar.html' %} {% block content%} {% endblock %}
+    </div>
+    {% include 'partials/_footer.html' %} {% if user.is_authenticated %}
+    <a href="#" data-toggle="modal" data-target="#chatbot">
+      <div style="position: fixed; bottom: 40px; right: 40px" id="botchate">
+        <img src="{% static 'images/bot.jpeg' %}" alt="..." class="team-img" />
+        <h5 style="color: green">Click to start chat</h5>
+      </div></a
+    >
+    {% else %}
+    <a href="#" data-toggle="modal" data-target="#notlogin">
+      <div style="position: fixed; bottom: 40px; right: 40px" id="botchate">
+        <img src="{% static 'images/bot.jpeg' %}" alt="..." class="team-img" />
+        <h5 style="color: green">Click to start chat</h5>
+      </div></a
+    >
+
+    {% endif %}
+    <!--Scroll to top-->
+    <div
+      class="modal fade"
+      id="notlogin"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="notlogin"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              style="text-align: center; color: green; font-size: 24px"
+              class="modal-title"
+              id="chatbotTitle"
+            >
+              Deibitis Hypertitis and Ulcer expert system
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body"><h4>Please Login to Access The Bot</h4></div>
+          <div class="modal-footer">
+            <a href="{% url 'login' %}" class="btn btn-primary"> Login </a>
+            <a href="{% url 'register' %}" class="btn btn-primary">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="chatbot"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="chatbot"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              style="text-align: center; color: green; font-size: 24px"
+              class="modal-title"
+              id="chatbotTitle"
+            >
+              Deibitis Hypertitis and Ulcer expert system
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">{% include 'partials/chatroom.html' %}</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <!--Revolution Slider-->
+    <script src="{% static 'plugins/revolution/js/extensions/jquery.themepunch.revolution.min.js' %}"></script>
+    <script src="{% static 'plugins/revolution/js/extensions/jquery.themepunch.tools.min.js' %}"></script>
+    <script src="{% static 'plugins/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+    <script src="{% static 'plugins/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+    <script src="{% static 'plugins/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+    <script src="{% static 'plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+    <script src="{% static 'plugins/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+    <script src="{% static 'plugins/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+    <script src="{% static 'plugins/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+    <script src="{% static 'plugins/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+    <script src="{% static 'plugins/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+    <script src="{% static 'js/main-slider-script.js'%}"></script>
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.js' %}"></script>
+    <script src="{% static 'js/owl.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/appear.js' %}"></script>
+    <script src="{% static 'js/script.js'%}"></script>
+  </body>
+</html>

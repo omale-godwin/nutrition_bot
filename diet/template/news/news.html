@@ -1,0 +1,134 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<!--Page Title-->
+<section
+  class="page-title"
+  style="background-image: url(static/images/background/6.jpg)"
+>
+  <div class="auto-container">
+    <h1>Blog</h1>
+  </div>
+  <!--Page Info-->
+  <div class="page-info">
+    <div class="auto-container clearfix">
+      <ul class="bread-crumb clearfix">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li>Blog List</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!--End Page Title-->
+
+<div class="sidebar-page-container">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!--Content Side-->
+      <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+        <div class="blog-list">
+          <!-- News Block -->
+          {% if news%} {% for new in news %}
+          <div class="news-block-two">
+            <div class="row">
+              <div class="image-column col-md-5 col-sm-5 col-xs-12">
+                <div class="image">
+                  <a href="#"><img src="{{ new.photos.url}}" alt="" /></a>
+                  <a href="#" class="tag">{{ new.category}}</a>
+                </div>
+              </div>
+              <div class="content-column col-md-7 col-sm-7 col-xs-12">
+                <div class="inner-column">
+                  <ul class="post-meta">
+                    <li><a href="#">{{new.dats}} </a></li>
+                    <li><a href="#">10 Comments </a></li>
+                  </ul>
+                  <h3>
+                    <a href="#">{{new.title}}</a>
+                  </h3>
+                  <div class="text">{{ new.desc}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %} {% else %}
+          <div style="text-align: center; font-size: 46px; color: yellow">
+            No News Available
+          </div>
+          {% endif %}
+        </div>
+        <!-- Blog List -->
+
+        <br />
+        <!-- Styled Pagination -->
+        <div class="styled-pagination alternate">
+          <div class="inner-container clearfix">
+            <ul class="clearfix text-center">
+              <li class="prev">
+                <a href="#"><span class="fa fa-chevron-left"></span></a>
+              </li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li class="next">
+                <a href="#"><span class="fa fa-chevron-right"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!--Sidebar Side-->
+      <div class="sidebar-side col-lg-3 col-md-4 col-sm-12 col-xs-12">
+        <aside class="sidebar default-sidebar">
+          <!-- Search -->
+          <div class="sidebar-widget search-box">
+            <form
+              method="post"
+              action="https://html.efforttech.com/html/tone-healthcoach/contact.html"
+            >
+              <div class="form-group">
+                <input
+                  type="search"
+                  name="search-field"
+                  value=""
+                  placeholder="Search ..."
+                  required
+                />
+                <button type="submit">
+                  <span class="icon fa fa-search"></span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!--Blog Category Widget-->
+          <div class="sidebar-widget sidebar-blog-category">
+            <div class="sidebar-title">
+              <h2>Categories</h2>
+            </div>
+            <ul class="cat-list">
+              <li class="clearfix">
+                <a href="#">Hypertitis <span>(6)</span></a>
+              </li>
+              <li class="clearfix">
+                <a href="#">diabetis <span>(7)</span></a>
+              </li>
+              <li class="clearfix active">
+                <a href="#">Ulcers <span>(4)</span></a>
+              </li>
+              <li class="clearfix">
+                <a href="#">Food Nutrition <span>(5)</span></a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Tags-->
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Sidebar Container -->
+
+{% endblock %}

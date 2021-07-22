@@ -1,0 +1,135 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<!--Page Title-->
+<section
+  class="page-title"
+  style="background-image: url(/static/images/background/5.jpg)"
+>
+  <div class="auto-container">
+    <h1>Contact Us</h1>
+  </div>
+  <!--Page Info-->
+  <div class="page-info">
+    <div class="auto-container clearfix">
+      <ul class="bread-crumb clearfix">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!--End Page Title-->
+
+<!-- Contact Info Section -->
+<section class="contact-info-section alternate">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!--Info Block-->
+      <div class="info-block col-md-4 col-sm-6 col-xs-12">
+        <div class="inner">
+          <div class="icon-box">
+            <span class="icon fa fa-map-marker"></span>
+          </div>
+          <div class="text">
+            <span>Address</span> Address: 15, gora street 20 kakuri kaduna
+            south, NIGERIA
+          </div>
+        </div>
+      </div>
+
+      <!--Info Block-->
+      <div class="info-block col-md-4 col-sm-6 col-xs-12">
+        <div class="inner">
+          <div class="icon-box">
+            <span class="icon fa fa-envelope-o"></span>
+          </div>
+          <div class="text"><span>Email</span> godwinomale2020@gmail.com</div>
+        </div>
+      </div>
+
+      <!--Info Block-->
+      <div class="info-block col-md-4 col-sm-6 col-xs-12">
+        <div class="inner">
+          <div class="icon-box">
+            <span class="icon fa fa-clock-o"></span>
+          </div>
+          <div class="text"><span>Time</span> 10:00 am to 00:00 am</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Contact Info -->
+{% include 'partials/_alerts.html' %}
+
+<!-- Contact Form  -->
+<section class="contact-form-section">
+  <div class="auto-container">
+    <div class="contact-form">
+      <!--Contact Form-->
+      <form
+        method="POST"
+        action="{% url 'contact' %}"
+        id="contact-form"
+        novalidate
+      >
+        {% csrf_token %}
+        <div class="row clearfix">
+          <div class="col-md-5 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <input
+                type="text"
+                name="fname"
+                placeholder="Fist Name"
+                required=""
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                name="lname"
+                placeholder="Last Name"
+                required=""
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required=""
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required=""
+              />
+            </div>
+          </div>
+
+          <div class="col-md-7 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <textarea name="message" placeholder="Massage"></textarea>
+            </div>
+            <div class="form-group text-right">
+              <button
+                class="theme-btn btn-style-three"
+                type="submit"
+                name="submit-form"
+              >
+                Submit Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
